@@ -103,5 +103,5 @@ console.log('User have a total of: '+ userPoints+ ' points');
 // alert user wow you have userPoints / 5 
 // if >3 you sure do know a little about me
 // if <3 you did not know enough about me, maybe after this game you'd know a little more!
-alert('');
+alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 5 possible points!' );
 
