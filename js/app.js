@@ -106,6 +106,7 @@ console.log('User have a total of: '+ userPoints+ ' points');
 // if >3 you sure do know a little about me
 // if <3 you did not know enough about me, maybe after this game you'd know a little more!
 
+// Question 6
 var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
 var tries = 0;
 while (answer6 !=7 && tries < 3){
@@ -133,22 +134,35 @@ while (answer6 !=7 && tries < 3){
         } else if (tries === 3 ){
         alert('You have exceeded your tries. Moving to next questions!');
     } 
-        
+// Question 7
 
+var cityIlived = ['lynnwood', 'burien', 'federal way', 'tacoma']; 
+var tries2 = 0;
+var rightAnswer;
+var answer7;
 
-
-
-
-
-
-
-
-
-
-
-
+while (tries2 < 7){ 
+    answer7 = prompt('Can you guess what city I\'ve lived, in Washington State?'+ 'Please enter a name of a city within Washington State!').toLowerCase();
+    for (var i = 0; i < cityIlived.length; i++){ //goes over our array
+        if (answer7 === cityIlived[i]){ // check if the answer is correct or incorrect ONLY
+            rightAnswer = true;
+        } 
+    } if (!rightAnswer){
+        alert('Nope, try again!');
+        console.log(incorrectAnswer);
+        tries2++
+    } else if (tries2 === 6){
+        alert('You have exceeded your tries, moving to next questions');
+        break;
+    } else {
+        alert ('Yayyyy you got it right, thank you for playing my game.');
+        console.log(correctAnswer);
+        userPoints++;
+        tries2 += 7;
+    }
+}
 alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 7 possible points!' );
-
+console.log(userName+ ' you scored '+ userPoints+ ' out of 7 possible points!');
 
 
 
