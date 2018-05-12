@@ -8,6 +8,8 @@ var userPoints = 0;
 // use a confirm box?
 // hope you know a little bit about me after playing this game
 
+// about me employment experience education goal
+
 
 alert('Hello fellow classmates, My name is Hai and welcome to my \n \'About ME!\' guessing game! \n Lets get started!!!');
 
@@ -86,7 +88,7 @@ if (answer4 === 'no' || answer4 === 'n'){
 alert (haveTotal + userPoints+ ' points');
 console.log('User have a total of: '+ userPoints+ ' points');
 
-// Question 5
+//Question 5
 
 var answer5 = prompt(nextQuestion + 'Do I love Seattle Traffics?\n'+ 'Type yes or no ').toLowerCase();
 console.log('Question 5, user answered: '+ answer5);
@@ -103,5 +105,58 @@ console.log('User have a total of: '+ userPoints+ ' points');
 // alert user wow you have userPoints / 5 
 // if >3 you sure do know a little about me
 // if <3 you did not know enough about me, maybe after this game you'd know a little more!
-alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 5 possible points!' );
+
+var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+var tries = 0;
+while (answer6 !=7 && tries < 3){
+    if (answer6 == 7){
+        alert('Amazing, 7 is correct!');
+        console.log(correctAnswer);
+        userPoints++;
+    } else if (answer6 < 7){
+        alert('You guessed wrong, '+ answer6 + ' is too low \n Try guessing again!!!');
+        var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+        tries++;
+    } else if (answer6 > 7){
+        alert('You guessed wrong, '+ answer6 + ' is too high! \n Try guessing again!!!');
+        var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+        tries++;
+    } 
+    // } else if (tries === 4){
+        //     alert('You have exceeded your tries. Moving to next questions!');
+        // }
+}if (answer6 == 7){
+            alert('Amazing, 7 is correct!');
+            console.log('Question 6, user answered: '+ answer6);
+            console.log(correctAnswer);
+            userPoints++;
+        } else if (tries === 3 ){
+        alert('You have exceeded your tries. Moving to next questions!');
+    } 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 7 possible points!' );
+
+
+
+
+
+
+
+
+
+
+
 
