@@ -171,27 +171,30 @@ var cityIlived = ['lynnwood', 'burien', 'federal way', 'tacoma'];
 var tries2 = 0;
 var rightAnswer;
 var answer7;
-
-while (tries2 < 7){ 
-    answer7 = prompt('Can you guess what city I\'ve lived, in Washington State?'+ 'Please enter a name of a city within Washington State!').toLowerCase();
-    for (var i = 0; i < cityIlived.length; i++){ //goes over our array
-        if (answer7 === cityIlived[i]){ // check if the answer is correct or incorrect ONLY
-            rightAnswer = true;
-        } 
-    } if (!rightAnswer){
-        alert('Nope, try again!');
-        console.log(incorrectAnswer);
-        tries2++
-    } else if (tries2 === 6){
-        alert('You have exceeded your tries, moving to next questions');
-        break;
-    } else {
-        alert ('Yayyyy you got it right, thank you for playing my game.');
-        console.log(correctAnswer);
-        userPoints++;
-        tries2 += 7;
+function question7(){
+    while (tries2 < 7){ 
+        answer7 = prompt('Can you guess what city I\'ve lived, in Washington State?'+ 'Please enter a name of a city within Washington State!').toLowerCase();
+        for (var i = 0; i < cityIlived.length; i++){ //goes over our array
+            if (answer7 === cityIlived[i]){ // check if the answer is correct or incorrect ONLY
+                rightAnswer = true;
+            } 
+        } if (!rightAnswer){
+            alert('Nope, try again!');
+            console.log(incorrectAnswer);
+            tries2++
+        } else if (tries2 === 6){
+            alert('You have exceeded your tries, moving to next questions');
+            break;
+        } else {
+            alert ('Yayyyy you got it right, thank you for playing my game.');
+            console.log(correctAnswer);
+            userPoints++;
+            tries2 += 7;
+        }
     }
-}
+};
+question7();
+//ended editing all questions
 alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 7 possible points!' );
 console.log(userName+ ' you scored '+ userPoints+ ' out of 7 possible points!');
 
