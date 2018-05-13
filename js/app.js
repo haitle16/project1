@@ -12,8 +12,13 @@ var userPoints = 0;
 
 
 alert('Hello fellow classmates, My name is Hai and welcome to my \n \'About ME!\' guessing game! \n Lets get started!!!');
-
-var userName = prompt('What is your name?');
+var userName;
+function name(){
+    userName = prompt('What is your name?');
+    return userName;
+};
+name();
+// end editing userName
 var firstQuestion = 'Hello, your first question is: \n';
 var nextQuestion = 'Your next question is: \n';
 var haveTotal = 'You have total of: ';
@@ -23,25 +28,28 @@ var incorrectAnswer = 'User answered the question incorrect!';
 alert('Hi ' + userName+ '! Hope you can learn something about me after playing.');
 
 // Question 1
-
-var answer = prompt(firstQuestion+'Is Seattle my hometown?'+'\nType yes or no').toLowerCase();
-console.log('User name is: '+ userName);
-console.log('Question 1, user answered: '+answer);
-
-if( answer === 'no' || answer === 'n'){
-    // if its correct give them a point
-    userPoints++;
-    alert('Good guess! I am from Austin, Minnesota');
-    console.log(correctAnswer);
-
-} else {
-    // if its not correct, tell them to keep on trying
-    alert('Nope, I am actually from Austin, Minnesota');
-    console.log(incorrectAnswer);
-}
-alert (haveTotal + userPoints+ ' points');
-console.log('User have a total of: '+ userPoints+' points');
-
+var answer;
+function question1(){
+    answer = prompt(firstQuestion+'Is Seattle my hometown?'+'\nType yes or no').toLowerCase();
+    console.log('User name is: '+ userName);
+    console.log('Question 1, user answered: '+answer);
+    
+    if( answer === 'no' || answer === 'n'){
+        // if its correct give them a point
+        userPoints++;
+        alert('Good guess! I am from Austin, Minnesota');
+        console.log(correctAnswer);
+    
+    } else {
+        // if its not correct, tell them to keep on trying
+        alert('Nope, I am actually from Austin, Minnesota');
+        console.log(incorrectAnswer);
+    }
+    alert (haveTotal + userPoints+ ' points');
+    console.log('User have a total of: '+ userPoints+' points');
+};
+question1();
+// end editing question 1
 // explains each questions/answer after in HTML
 // Question 2
 
