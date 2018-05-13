@@ -71,19 +71,23 @@ question2();
 //end editing Question 2
 
 // Question 3
-
-var answer3 = prompt(nextQuestion+ 'Is Veggie Grill my favorite restaurant? \n'+ 'Type yes or no ').toLowerCase();
-console.log('Question 3, user answered: '+ answer3);
-if (answer3 === 'yes' || answer3 === 'y'){
-    alert('Goodjob, I love Veggie Grill');
-    userPoints++;
-    console.log(correctAnswer);
-} else {
-    alert('Nope, The answer is yes');
-    console.log(incorrectAnswer);
-}
-alert (haveTotal + userPoints+ ' points');
-console.log('User have a total of: '+ userPoints+ ' points');
+var answer3;
+function question3(){
+    answer3 = prompt(nextQuestion+ 'Is Veggie Grill my favorite restaurant? \n'+ 'Type yes or no ').toLowerCase();
+    console.log('Question 3, user answered: '+ answer3);
+    if (answer3 === 'yes' || answer3 === 'y'){
+        alert('Goodjob, I love Veggie Grill');
+        userPoints++;
+        console.log(correctAnswer);
+    } else {
+        alert('Nope, The answer is yes');
+        console.log(incorrectAnswer);
+    }
+    alert (haveTotal + userPoints+ ' points');
+    console.log('User have a total of: '+ userPoints+ ' points');
+};
+question3();
+// end editing Question 3
 
 // Question 4
 
