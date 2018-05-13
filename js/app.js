@@ -132,33 +132,39 @@ question5();
 // if <3 you did not know enough about me, maybe after this game you'd know a little more!
 
 // Question 6
-var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
-var tries = 0;
-while (answer6 !=7 && tries < 3){
-    if (answer6 == 7){
-        alert('Amazing, 7 is correct!');
-        console.log(correctAnswer);
-        userPoints++;
-    } else if (answer6 < 7){
-        alert('You guessed wrong, '+ answer6 + ' is too low \n Try guessing again!!!');
-        var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
-        tries++;
-    } else if (answer6 > 7){
-        alert('You guessed wrong, '+ answer6 + ' is too high! \n Try guessing again!!!');
-        var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
-        tries++;
-    } 
-    // } else if (tries === 4){
-        //     alert('You have exceeded your tries. Moving to next questions!');
-        // }
-}if (answer6 == 7){
+var answer6;
+function question6(){
+    answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+    var tries = 0;
+    while (answer6 !=7 && tries < 3){
+        if (answer6 == 7){
             alert('Amazing, 7 is correct!');
-            console.log('Question 6, user answered: '+ answer6);
             console.log(correctAnswer);
             userPoints++;
-        } else if (tries === 3 ){
-        alert('You have exceeded your tries. Moving to next questions!');
-    } 
+        } else if (answer6 < 7){
+            alert('You guessed wrong, '+ answer6 + ' is too low \n Try guessing again!!!');
+            var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+            tries++;
+        } else if (answer6 > 7){
+            alert('You guessed wrong, '+ answer6 + ' is too high! \n Try guessing again!!!');
+            var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
+            tries++;
+        } 
+        // } else if (tries === 4){
+            //     alert('You have exceeded your tries. Moving to next questions!');
+            // }
+    }if (answer6 == 7){
+                alert('Amazing, 7 is correct!');
+                console.log('Question 6, user answered: '+ answer6);
+                console.log(correctAnswer);
+                userPoints++;
+            } else if (tries === 3 ){
+            alert('You have exceeded your tries. Moving to next questions!');
+        } 
+};
+question6();
+//ended editing question 6
+
 // Question 7
 
 var cityIlived = ['lynnwood', 'burien', 'federal way', 'tacoma']; 
