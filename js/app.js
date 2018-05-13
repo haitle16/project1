@@ -107,20 +107,26 @@ function question4(){
 };
 question4();
 //ended editing Question 4
-//Question 5
 
-var answer5 = prompt(nextQuestion + 'Do I love Seattle Traffics?\n'+ 'Type yes or no ').toLowerCase();
-console.log('Question 5, user answered: '+ answer5);
-if (answer5 === 'no' || answer5 === 'n'){
-    alert('Goodjob, you are right! Seattle traffic is no fun!!');
-    userPoints++;
-    console.log(correctAnswer);
-} else {
-    alert('Oohh noes, Seattle traffic is horribles at times!');
-    console.log(incorrectAnswer);
-}
-alert (haveTotal + userPoints+ ' points');
-console.log('User have a total of: '+ userPoints+ ' points');
+//Question 5
+var answer5;
+function question5(){
+    answer5 = prompt(nextQuestion + 'Do I love Seattle Traffics?\n'+ 'Type yes or no ').toLowerCase();
+    console.log('Question 5, user answered: '+ answer5);
+    if (answer5 === 'no' || answer5 === 'n'){
+        alert('Goodjob, you are right! Seattle traffic is no fun!!');
+        userPoints++;
+        console.log(correctAnswer);
+    } else {
+        alert('Oohh noes, Seattle traffic is horribles at times!');
+        console.log(incorrectAnswer);
+    }
+    alert (haveTotal + userPoints+ ' points');
+    console.log('User have a total of: '+ userPoints+ ' points');
+};
+question5();
+//ended editing Question5
+
 // alert user wow you have userPoints / 5 
 // if >3 you sure do know a little about me
 // if <3 you did not know enough about me, maybe after this game you'd know a little more!
