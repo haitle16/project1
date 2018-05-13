@@ -52,19 +52,23 @@ question1();
 // end editing question 1
 // explains each questions/answer after in HTML
 // Question 2
-
-var answer2 = prompt(nextQuestion+ 'Do I have a Associate Degree?\n' + 'Type yes or no ').toLowerCase();
-console.log('Question 2, user answered: '+ answer2);
-if (answer2 === 'yes' || answer2 === 'y'){
-    alert('You are correct, I do have a Associate of Science Degree! ');
-    userPoints++;
-    console.log(correctAnswer);
-} else {
-    alert ('Good try, but answer is yes!');
-    console.log(incorrectAnswer);
-}
-alert (haveTotal + userPoints+ ' points');
-console.log('User have a total of: '+ userPoints+ ' points');
+var answer2
+function question2(){
+    answer2 = prompt(nextQuestion+ 'Do I have a Associate Degree?\n' + 'Type yes or no ').toLowerCase();
+    console.log('Question 2, user answered: '+ answer2);
+    if (answer2 === 'yes' || answer2 === 'y'){
+        alert('You are correct, I do have a Associate of Science Degree! ');
+        userPoints++;
+        console.log(correctAnswer);
+    } else {
+        alert ('Good try, but answer is yes!');
+        console.log(incorrectAnswer);
+    }
+    alert (haveTotal + userPoints+ ' points');
+    console.log('User have a total of: '+ userPoints+ ' points');
+};
+question2();
+//end editing Question 2
 
 // Question 3
 
