@@ -90,20 +90,23 @@ question3();
 // end editing Question 3
 
 // Question 4
-
-var answer4 =prompt(nextQuestion + 'Do I have a dog? \n'+ 'Type yes or no ').toLowerCase();
-console.log('Question 4, user answered: '+ answer4);
-if (answer4 === 'no' || answer4 === 'n'){
-    alert('Awesome, I do not have a dog, but I would love to have one in the future');
-    userPoints++;
-    console.log(correctAnswer);
-} else {
-    alert('Nope, I don\'t, but I would love to have a toy Poodles one day!');
-    console.log(incorrectAnswer);
-}
-alert (haveTotal + userPoints+ ' points');
-console.log('User have a total of: '+ userPoints+ ' points');
-
+var answer4;
+function question4(){
+    answer4 =prompt(nextQuestion + 'Do I have a dog? \n'+ 'Type yes or no ').toLowerCase();
+    console.log('Question 4, user answered: '+ answer4);
+    if (answer4 === 'no' || answer4 === 'n'){
+        alert('Awesome, I do not have a dog, but I would love to have one in the future');
+        userPoints++;
+        console.log(correctAnswer);
+    } else {
+        alert('Nope, I don\'t, but I would love to have a toy Poodles one day!');
+        console.log(incorrectAnswer);
+    }
+    alert (haveTotal + userPoints+ ' points');
+    console.log('User have a total of: '+ userPoints+ ' points');
+};
+question4();
+//ended editing Question 4
 //Question 5
 
 var answer5 = prompt(nextQuestion + 'Do I love Seattle Traffics?\n'+ 'Type yes or no ').toLowerCase();
