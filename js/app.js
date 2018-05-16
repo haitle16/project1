@@ -114,9 +114,6 @@ while (answer6 !=7 && tries < 3){
         var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
         tries++;
     } 
-    // } else if (tries === 4){
-        //     alert('You have exceeded your tries. Moving to next questions!');
-        // }
 }if (answer6 == 7){
             alert('Amazing, 7 is correct!');
             console.log('Question 6, user answered: '+ answer6);
