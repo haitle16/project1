@@ -1,7 +1,16 @@
 *{
     font-family: Helvetica, sans-serif;
-    background-color: bisque;
+    background-color: rgb(240,248,255);
 }
 h1{
     color:black;
+    text-decoration: underline;
 }  
+#developer{
+    width: 1250px;
+    height: 200px;
+}
+#khalifa{
+    width: 300px;
+    float: right;
+}

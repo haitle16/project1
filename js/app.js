@@ -1,24 +1,12 @@
 'use strict'
 
 var userPoints = 0;
-// follow the rules very strictly
-// check if the user's answer is correct
-// find out whats the answer is
-// toLowerCase or toUpperCase
-// use a confirm box?
-// hope you know a little bit about me after playing this game
-
-// about me employment experience education goal
-
-
 alert('Hello fellow classmates, My name is Hai and welcome to my \n \'About ME!\' guessing game! \n Lets get started!!!');
 var userName;
 function name(){
     userName = prompt('What is your name?');
     return userName;
 };
-name();
-// end editing userName
 var firstQuestion = 'Hello, your first question is: \n';
 var nextQuestion = 'Your next question is: \n';
 var haveTotal = 'You have total of: ';
@@ -33,24 +21,19 @@ function question1(){
     answer = prompt(firstQuestion+'Is Seattle my hometown?'+'\nType yes or no').toLowerCase();
     console.log('User name is: '+ userName);
     console.log('Question 1, user answered: '+answer);
-    
     if( answer === 'no' || answer === 'n'){
         // if its correct give them a point
         userPoints++;
         alert('Good guess! I am from Austin, Minnesota');
         console.log(correctAnswer);
-    
     } else {
-        // if its not correct, tell them to keep on trying
+        // if its not correct, tell them the correct answer!
         alert('Nope, I am actually from Austin, Minnesota');
         console.log(incorrectAnswer);
     }
     alert (haveTotal + userPoints+ ' points');
     console.log('User have a total of: '+ userPoints+' points');
 };
-question1();
-// end editing question 1
-// explains each questions/answer after in HTML
 // Question 2
 var answer2
 function question2(){
@@ -67,9 +50,6 @@ function question2(){
     alert (haveTotal + userPoints+ ' points');
     console.log('User have a total of: '+ userPoints+ ' points');
 };
-question2();
-//end editing Question 2
-
 // Question 3
 var answer3;
 function question3(){
@@ -86,9 +66,6 @@ function question3(){
     alert (haveTotal + userPoints+ ' points');
     console.log('User have a total of: '+ userPoints+ ' points');
 };
-question3();
-// end editing Question 3
-
 // Question 4
 var answer4;
 function question4(){
@@ -105,9 +82,6 @@ function question4(){
     alert (haveTotal + userPoints+ ' points');
     console.log('User have a total of: '+ userPoints+ ' points');
 };
-question4();
-//ended editing Question 4
-
 //Question 5
 var answer5;
 function question5(){
@@ -124,13 +98,6 @@ function question5(){
     alert (haveTotal + userPoints+ ' points');
     console.log('User have a total of: '+ userPoints+ ' points');
 };
-question5();
-//ended editing Question5
-
-// alert user wow you have userPoints / 5 
-// if >3 you sure do know a little about me
-// if <3 you did not know enough about me, maybe after this game you'd know a little more!
-
 // Question 6
 var answer6;
 function question6(){
@@ -150,9 +117,6 @@ function question6(){
             var answer6 = prompt('What\'s my favorite number?'+ 'Guess number from  0 to 10 !!!');
             tries++;
         } 
-        // } else if (tries === 4){
-            //     alert('You have exceeded your tries. Moving to next questions!');
-            // }
     }if (answer6 == 7){
                 alert('Amazing, 7 is correct!');
                 console.log('Question 6, user answered: '+ answer6);
@@ -162,11 +126,7 @@ function question6(){
             alert('You have exceeded your tries. Moving to next questions!');
         } 
 };
-question6();
-//ended editing question 6
-
 // Question 7
-
 var cityIlived = ['lynnwood', 'burien', 'federal way', 'tacoma']; 
 var tries2 = 0;
 var rightAnswer;
@@ -193,8 +153,14 @@ function question7(){
         }
     }
 };
+name();
+question1();
+question2();
+question3();
+question4();
+question5();
+question6();
 question7();
-//ended editing all questions
 alert('Congratulation '+userName+ ' you scored '+ userPoints+ ' out of 7 possible points!' );
 console.log(userName+ ' you scored '+ userPoints+ ' out of 7 possible points!');
 
